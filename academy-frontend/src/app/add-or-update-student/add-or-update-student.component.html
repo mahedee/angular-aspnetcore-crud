@@ -1,0 +1,31 @@
+<div>
+    <h2 *ngIf="!studentInfo || studentInfo.id === undefined">Add record</h2>
+    <h2 *ngIf="studentInfo && studentInfo.id !== undefined">Update record (ID: )</h2>
+    <form>
+        <div class="form-group">
+            <label for="roll-input">Roll No:</label>
+            <input type="text" id="rollno-input" [(ngModel)]="studentInfo.rollNo" class="form-control" name="rollno" />
+        </div>
+        <div class="form-group">
+            <label for="name-input">Name: </label>
+            <input type="text" id="name-input" [(ngModel)]="studentInfo.name" class="form-control" name="name" />
+        </div>
+        <div class="form-group">
+            <label for="fatherName-input">Father Name: </label>
+            <input type="text" id="fatherName-input" [(ngModel)]="studentInfo.fatherName" class="form-control"  name="fatherName" />
+        </div>
+
+        <div class="form-group">
+            <label for="motherName-input">Mother Name: </label>
+            <input type="text" id="motherName-input" [(ngModel)]="studentInfo.motherName" class="form-control" name="motherName" />
+        </div>
+
+        <div class="form-group">
+            <label for="bloodGroup-input">Blood Group</label>
+            <input type="text" id="bloodGroup-input" [(ngModel)]="studentInfo.bloodGroup" class="form-control" name="bloodGroup" />
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="addOrUpdateStudentRecord($event);">Save</button>
+
+    </form>
+</div>

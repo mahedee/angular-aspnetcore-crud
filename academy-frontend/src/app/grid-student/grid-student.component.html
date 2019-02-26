@@ -1,0 +1,26 @@
+
+<a href="#" id="new-button">New</a>
+<table>
+<thead>
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Father Name</th>
+        <th>Mother Name</th>
+        <th>Blood Group</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let studentInfo of studentData"> 
+        <td>{{ studentInfo.rollNo }}</td>
+        <td>{{ studentInfo.name }}</td>
+        <td>{{ studentInfo.fatherName }}</td>
+        <td>{{ studentInfo.motherName }}</td>
+        <td>{{ studentInfo.bloodGroup }}</td>
+        <td>
+            <a href="#" (click)="editRecord(studentInfo)">Edit</a> ||
+            <a href="#" (click)="deleteRecord(studentInfo)">Delete</a>
+        </td>
+    </tr>
+</tbody>
+</table>

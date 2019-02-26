@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-4">
+    <app-add-or-update-student (studentCreated)="createOrUpdateStudent($event)" [studentInfo]="currentStudent"></app-add-or-update-student>
+    <!-- <app-add-or-update-student></app-add-or-update-student> -->
+  </div> 
+  <div class="col-md-8">
+    <app-grid-student [studentData]="studentData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-grid-student>
+    <!-- <app-grid-student></app-grid-student> -->
+  </div>
+</div>
